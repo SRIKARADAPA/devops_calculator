@@ -22,7 +22,8 @@ pipeline {
         sh 'mvn test'
       }
     }
-  }
+  
+
 
 
 
@@ -49,3 +50,5 @@ stage('DockerHub') {
       }
     }
 }
+}
+
