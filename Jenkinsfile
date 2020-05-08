@@ -28,6 +28,7 @@ pipeline {
 
 
 stage('DockerHub') {
+
       stages{
         stage('Build Image') {
           steps{
@@ -47,3 +48,4 @@ stage('DockerHub') {
         }
       }
     }
+}
