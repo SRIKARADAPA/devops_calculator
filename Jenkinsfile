@@ -49,21 +49,20 @@ stage('DockerHub') {
         }
      }
     }
+  
+   stage('Deploy') {
+      agent any
+      steps {
+        script {
+         step([$class: "RundeckNotifier",
+          rundeckInstance: "Rundeck",
+         options: """
+           BUILD_VERSION=$BUILD_NUMBER
+          """,
+          jobId: "38f5a24b-772e-4a92-9032-df0a77678e3d"])
+        }
+      }
     }
 }
-   //stage('Deploy') {
-      //agent any
-      //steps {
-       // script {
-        //  step([$class: "RundeckNotifier",
-         // rundeckInstance: "Rundeck",
-         // options: """
-           // BUILD_VERSION=$BUILD_NUMBER
-          //""",
-          //jobId: "38f5a24b-772e-4a92-9032-df0a77678e3d"])
-        //}
-      //}
-    //}
-//}
-//}
+}
 
