@@ -49,8 +49,6 @@ stage('DockerHub') {
         }
      }
     }
-    }
-}
    stage('Deploy') {
       agent any
       steps {
