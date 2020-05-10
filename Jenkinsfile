@@ -1,9 +1,9 @@
 pipeline {
-	//environment {
-    //registry = "srikaradapa/devops_calculator"
-    //registryCredential = 'dockerhub'
-    //dockerImage = ''
-  //}
+	environment {
+    registry = "srikaradapa/devops_calculator"
+    registryCredential = 'dockerhub'
+    dockerImage = ''
+  }
   agent any
   stages 
     {
@@ -51,7 +51,7 @@ stage('DockerHub') {
     }
     }
 }
-   // stage('Deploy') {
+   //stage('Deploy') {
       //agent any
       //steps {
        // script {
